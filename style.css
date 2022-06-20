@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* background-color: #000; */
+}
+
+body {
+    height: 500vh;
+}
+
+.line-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 480vh;
+    z-index: 3;
+    transform: translateX(-50%);
+}
+
+svg {
+    display: inline-block;
+    height: 100%;
+}
+
+section {
+    height: 100vh;
+    width: 100%;
+}
+
+.one {
+    background-image: url('./img/mountains-bg.jpg');
+    background-size: cover;
+    position: relative;
+}
+
+.one img {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.one .gradient-one {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, rgba(2,0,36,0) 90%, rgba(107,147,191,1) 100%);
+    z-index: 2;
+}
+
+.two {
+    background-image: linear-gradient(#6B93BF, #011E48);
+}
+
+.three {
+    background-image: url('./img/sky-bg.jpg');
+    background-size: cover;
+}
+
+.four {
+    background-image: linear-gradient(#000000, rgb(199, 182, 175));
+}
+
+.five {
+    background-image: url('./img/coaster-bg.jpg');
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+}
+
+.five .gradient-five {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgba(2,0,36,0) 90%, rgba(199, 182, 175,1) 100%);
+    z-index: 2;
+}
+
+@media screen and (max-width: 1960px) {
+    body {
+        width: 1960px;
+    }
+
+    .line-container {
+        left: 0;
+        transform: translate(0)
+    }
+}
