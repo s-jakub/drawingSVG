@@ -2,18 +2,14 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* background-color: #000; */
-}
-
-body {
-    height: 500vh;
+    color: white
 }
 
 .line-container {
     position: absolute;
     top: 0;
     left: 50%;
-    height: 480vh;
+    height: 380vh;
     z-index: 3;
     transform: translateX(-50%);
 }
@@ -25,13 +21,29 @@ svg {
 
 section {
     height: 100vh;
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+p {
+    font-size: 4rem;
 }
 
 .one {
-    background-image: url('./img/mountains-bg.jpg');
-    background-size: cover;
+    background: url('./img/mountains-bg.jpg');
+    background-size: 108%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
     position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .one img {
@@ -50,6 +62,40 @@ section {
     z-index: 2;
 }
 
+.scroll-down-container {
+    z-index: 2;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: .8;
+}
+
+.icon {
+    border: 2px solid #fff;
+    border-radius: 50%;
+    padding: 15px;
+    animation: bounce 1s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0% {
+        transform: rotate(90deg) translateX(-10px)
+    }
+    50% {
+        transform: rotate(90deg) translateX(0px);
+    }
+    100% {
+        transform: rotate(90deg) translateX(-10px);
+    }
+}
+
+.text {
+    font-size: 1.2rem;
+    padding-bottom: 10px;
+}
+
 .two {
     background-image: linear-gradient(#6B93BF, #011E48);
 }
@@ -60,15 +106,21 @@ section {
 }
 
 .four {
-    background-image: linear-gradient(#000000, rgb(199, 182, 175));
+    background-image: linear-gradient(#000000, rgb(201, 84, 139));
 }
 
 .five {
-    background-image: url('./img/coaster-bg.jpg');
+    background-image: url('./img/landscape.jpg');
     background-size: cover;
     background-position: bottom;
     position: relative;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
 }
+
 
 .five .gradient-five {
     width: 100%;
@@ -76,13 +128,14 @@ section {
     position: absolute;
     top: 0;
     left: 0;
-    background: linear-gradient(0deg, rgba(2,0,36,0) 90%, rgba(199, 182, 175,1) 100%);
+    background: linear-gradient(0deg, rgba(2,0,36,0) 90%, rgba(201, 84, 139,1) 100%);
     z-index: 2;
 }
 
-@media screen and (max-width: 1960px) {
+
+@media screen and (max-width: 2045px) {
     body {
-        width: 1960px;
+        width: 2045px;
     }
 
     .line-container {
